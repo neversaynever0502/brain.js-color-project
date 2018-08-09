@@ -74,8 +74,12 @@ function dark(){
 }
 
 function overTraining(){
-  overTrainFlag = true
-  alert('訓練完畢，來亂調顏色看你訓練的結果吧:)')
+  if(trainingData.length==0){
+    alert('沒有任何訓練資料，請先設定訓練資料。')
+  }else{
+    overTrainFlag = true
+    alert('訓練完畢，來亂調顏色看你訓練的結果吧:)')
+  }
 }
 
 input2.addEventListener('change',(e)=>{
